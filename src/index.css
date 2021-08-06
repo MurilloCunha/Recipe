@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary:#f78c05;
+  --secondary:#d17a22;
+  --contrast:#fff;
+  --primary-text:#000;
+  --secondary-text:#999;
+  --alternative-text:#f78c05;
+  --shadow:#999;
+  --inactive:rgba(255,255,255,0.3);
+  --error:rgba(255,0,0,1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url(./components/logo/logo.css);
+@import url(./components/header/header.css);
+@import url(./components/button/button.css);
+@import url(./components/TextInput/text-input.css);
+@import url(./components/loader/index.css);
+@import url(./components/avatar/avatar.css);
