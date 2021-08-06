@@ -1,0 +1,44 @@
+.dots{
+  height: 1rem;
+  width: 3.6rem;
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:5px;
+}
+
+/*-----------dots01 ---------*/
+
+.dots[data-model="1"] .dot1 {
+  fill:var(--primary);
+  animation:dots01 1s ease-in-out infinite;
+}
+.dots[data-model="1"] .dot2 {
+  fill:var(--primary);
+  animation:dots01 1s 0.1s ease-in-out infinite;
+
+}
+.dots[data-model="1"] .dot3 {
+  fill:var(--primary);
+  animation:dots01 1s 0.2s ease-in-out infinite;
+
+}
+
+@keyframes dots01 {
+  0%{
+    transform:translateY(0px);
+  }
+  30%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-25px);
+  }
+  70%{
+    transform:translateY(0px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
