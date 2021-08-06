@@ -1,0 +1,33 @@
+button{
+  max-width:12rem;
+  height:2rem;
+  border-radius:1.5rem;
+  border:none;
+  box-sizing:border-box;
+  padding:0 1.5rem;
+  cursor:pointer;
+}
+
+.button--primary{
+  background: var(--contrast);
+  color: var(--alternative-text);
+  font-size:1rem;
+  letter-spacing:2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: filter ease-in-out 0.3s;
+}
+.button--secondary{
+  background: var(--primary);
+  color: var(--contrast);
+  border:1px solid var(--contrast);
+  font-size:1rem;
+  letter-spacing:2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: filter ease-in-out 0.3s;
+}
+
+button:hover{
+  filter: brightness(90%);
+}
