@@ -5,125 +5,28 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: -1px 2px 8px var(--shadow);
   box-sizing: border-box;
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 
-.header__nav{
+.header__navigation{
+  display:none;
+}
+.header__info{
   display: flex;
   align-items: center;
-
-}
-
-.header__login{
-  display: flex;
-  align-items: center;
-  flex-wrap:wrap;
-}
-
-.header__error{
+  justify-content: center;
   box-sizing: border-box;
-  padding:0 1rem;
-  font-family: "Mont-Serrat",sans-serif;
-  font-size: 0.7rem;
-  color: var(--contrast);
-  position: relative;
-  top:1.2rem;
-  left:-10.5rem;
-  margin:-5.5rem;
-
 }
-
-.animate{
-  position:absolute;
-  top:1.25rem;
-  right:5rem;
-  display: block;
-  z-index:2;
-  border-radius:1rem;
-}
-.login{
-  animation: loginAnimation 0.5s ease-out;
-}
-.logout{
-  animation: logoutAnimation 0.5s ease-out;
-}
-
-@keyframes loginAnimation {
-  0%{
-    width:7rem;
-    height: 2rem;
-    background: transparent;
-    right:5rem;
-    border-radius:1.5rem;
+@media screen and (min-width:840px) {
+  .header__navigation{
+    display:block;
+    margin: 0 1rem;
+    width:20rem;
   }
-  1%{
-    width:7rem;
-    height: 2rem;
-    background: #fff;
-    right:5rem;
-    border-radius:1.5rem;
-  }
-  50%{
-    width:13.5rem;
-    height: 2rem;
-    background: #fff;
-    right:5rem;
-    border-radius:1.5rem;
-  }
-  99%{
-    width:2rem;
-    height: 2rem;
-    background: #fff;
-    right:16.5rem;
-    border-radius:1.5rem;
-
-  }
-  100%{
-    width:2rem;
-    height: 2rem;
-    background: transparent;
-    right:16.5rem;
-    border-radius:1.5rem;
-  }
-}
-
-@keyframes logoutAnimation {
-  100%{
-    width:7rem;
-    height: 2rem;
-    background: transparent;
-    right:5rem;
-    border-radius:1.5rem;
-  }
-  99%{
-    width:7rem;
-    height: 2rem;
-    background: #fff;
-    right:5rem;
-    border-radius:1.5rem;
-  }
-  50%{
-    width:13.5rem;
-    height: 2rem;
-    background: #fff;
-    right:5rem;
-    border-radius:1.5rem;
-  }
-  1%{
-    width:2rem;
-    height: 2rem;
-    background: #fff;
-    right:16.5rem;
-    border-radius:1.5rem;
-
-  }
-  0%{
-    width:2rem;
-    height: 2rem;
-    background: transparent;
-    right:16.5rem;
-    border-radius:1.5rem;
+  .header__info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
