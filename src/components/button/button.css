@@ -1,11 +1,15 @@
 button{
-  max-width:12rem;
+  min-width: 1.5rem;
   height:2rem;
   border-radius:1.5rem;
   border:none;
   box-sizing:border-box;
   padding:0 1.5rem;
   cursor:pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button--primary{
