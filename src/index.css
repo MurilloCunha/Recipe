@@ -11,7 +11,7 @@ body {
   --primary-text:#000;
   --secondary-text:#999;
   --alternative-text:#f78c05;
-  --shadow:#999;
+  --gray:#ccc;
   --inactive:rgba(255,255,255,0.3);
   --error:rgba(255,0,0,1);
 }
@@ -21,9 +21,13 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 @import url(./components/logo/logo.css);
 @import url(./components/header/header.css);
+@import url(./components/navigation/navigation.css);
+@import url(./components/icon/icon.css);
 @import url(./components/button/button.css);
-@import url(./components/TextInput/text-input.css);
-@import url(./components/loader/index.css);
 @import url(./components/avatar/avatar.css);
