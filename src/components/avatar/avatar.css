@@ -2,10 +2,9 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  margin:0 1rem;
 }
 
-.avatar > img{
+.avatar  svg{
   background-color: var(--contrast);
   height: 2rem;
   width: 2rem;

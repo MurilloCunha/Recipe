@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import avatar from '../../icons/avatar.svg'
 
+import Icon from '../icon'
+
 function Avatar({user}) {
   return (
-    <div className="avatar">
-      <img src={user.img} alt=""/>
+    <div className="avatar" >
+      <Icon id="avatar" color="#f78c05"/>
       <div>
         <p>{user.name}</p>
         <p>{user.totalReceipts} receitas</p>
