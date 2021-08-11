@@ -1,5 +1,7 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
+
 function TextInput(props) {
 
   const handleError = (err) => {
@@ -9,8 +11,12 @@ function TextInput(props) {
   return (
     <input 
     className={`text-input text-input--${handleError(props.error)}`}
-    {...props} />
+    {...props} error="" />
   )
 }
 
 export default TextInput
+
+TextInput.propTypes={
+  error: PropTypes.bool,
+}
