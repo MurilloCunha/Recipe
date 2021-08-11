@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import avatar from '../../icons/avatar.svg'
 
 import Icon from '../icon'
 
@@ -28,7 +27,7 @@ Avatar.propTypes = {
 
 Avatar.defaultProps = {
   user:{
-    img:avatar,
+    img:"",
     name:"usuario",
     totalReceipts:0
   }
