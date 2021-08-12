@@ -1,0 +1,21 @@
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo > img{
+  margin:0;
+}
+
+.logo > img[data-size="small"]{
+  height:2.5rem;
+}
+
+.logo > img[data-size="medium"]{
+  height:4rem;
+}
+
+.logo > img[data-size="large"]{
+  height:6rem;
+}
