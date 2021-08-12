@@ -3,14 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function TextInput(props) {
-
-  const handleError = (err) => {
-    return err ? "error":""
-  }
-
   return (
     <input 
-    className={`text-input text-input--${handleError(props.error)}`}
+    className={`text-input`}
+    data-error={props.error}
     {...props} error="" />
   )
 }
