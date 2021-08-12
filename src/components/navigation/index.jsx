@@ -5,13 +5,17 @@ import PropTypes from 'prop-types'
 import Icon from '../icon'
 
 
-function Navigation({baseColor, activeColor}) {
+function Navigation({baseColor, activeColor,setUser}) {
   const location = useLocation()
   console.log(location.pathname)
 
   const isActive = useCallback((page)=>{
     return location.pathname.includes(page)
   },[location])
+
+  const handleLogout = () => {
+    setUser({logged:false})
+  }
 
   return (
     <nav>
@@ -34,7 +38,7 @@ function Navigation({baseColor, activeColor}) {
             <p data-active={isActive("nova-receita")}>Nova Receita</p>
           </li>
         </Link>
-        <Link to="/home">
+        <Link to="/home" onClick={handleLogout}>
           <li>
             <Icon id="logout" color={baseColor} activeColor={activeColor} />
             <p >Sair</p>
