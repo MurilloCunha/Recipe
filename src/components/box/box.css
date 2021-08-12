@@ -1,0 +1,20 @@
+.box{
+  min-width: 10rem;
+  min-height: 10rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box[data-direction="column"]{
+  flex-direction: column;
+}
+.box[data-direction="row"]{
+  flex-direction: row;
+}
+
+.box[data-style="glass"]{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
