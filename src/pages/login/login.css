@@ -1,0 +1,138 @@
+.login-page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: load linear 0.1s;
+}
+
+
+.login-page__presentation,
+.login-page__inputs,
+.login-page__control
+{
+  max-width: 15rem;
+  margin-bottom:1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-page__control{
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+} 
+
+.login-page__presentation h1,p{
+  margin:0;
+  padding: 0;
+}
+
+.login-page__subscribe{
+  color: var(--contrast);
+  margin-left: 1rem;
+}
+
+.login-page__background{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.login-page__background img{
+  position: absolute;
+  height: 100vh;
+  padding: 0;
+}
+.login-page__background div{
+  background-image: url(https://image.freepik.com/fotos-gratis/conceito-de-comida-saudavel-com-ingredientes-saudaveis_1220-3986.jpg);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.login-page__background figcaption{
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.8);
+  z-index:2;
+  align-self: flex-end;
+  margin: 1rem 0;
+  text-align: center;
+  padding:0.5rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  font-size:0.8rem;
+  font-family: "Mont-Serrat",sans-serif;
+  font-weight: 400;
+}
+
+.login-page__background a{
+  color: #fff;
+}
+
+
+form{
+  z-index:2;
+}
+
+.figcaption__mobile{
+  display: block;
+}
+
+.figcaption__desktop{
+  display: none;
+}
+
+.login-page__error{
+  color: var(--contrast);
+  font-family: "Mont-Serrat",sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: right;
+  margin:0;
+  padding:0;
+  width: 100%;
+}
+
+@media screen and (min-width:810px) {
+  .login-page__background div{
+    background-image: url(../../images/bg-image-desktop.jpg);
+  }
+  
+  .login-page{
+    align-items: center;
+    justify-content: flex-end;
+    margin-right:10rem;
+    width: auto;
+  }
+
+  .figcaption__mobile{
+    display: none;
+  }
+
+  .figcaption__desktop{
+    display: block;
+  }
+}
+
+@keyframes load {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
