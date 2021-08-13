@@ -20,7 +20,7 @@
 
 .avatar p{
   color: var(--contrast);
-  font-family: 'Mont-Serrat',sans-serif;
+  font-family: 'MontSerrat',sans-serif;
   margin:0 0.5rem;
 }
 .avatar p:last-child{
