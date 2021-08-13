@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 import svgIcons from './svg-icons'
 
-function Icon({id, color,active, activeColor="#000"}) {
+function Icon({id, color,active, activeColor="#000", size="medium"}) {
 
   const iconColor = active ? activeColor : color
 
   return (
-    <figure className="svg-icon">
+    <figure className="svg-icon" data-size={size}>
       {svgIcons(id,iconColor)}
     </figure>
   )
@@ -21,4 +21,5 @@ Icon.propTypes ={
   color: PropTypes.string,
   active: PropTypes.bool,
   activeColor: PropTypes.string,
+  size: PropTypes.string,
 }
