@@ -1,0 +1,22 @@
+.image-input{
+  margin:1rem;
+  box-sizing: border-box;
+}
+
+.image-input label{
+  height: 7rem;
+  width: 7rem;
+  display: block;
+}
+
+.image-input img {
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-input input{
+  position: absolute;
+  left:-2000px;
+}
