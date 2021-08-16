@@ -10,8 +10,8 @@ function RecipeCard({recipe}) {
     const starList = []
     for(let i = 0; i<5; i++){
       i < score 
-        ? starList.push(<Icon id="starFilled" size="small" color="#f78c05"/>)
-        : starList.push(<Icon id="starBorder" size="small" color="#f78c05"/>)
+        ? starList.push(<Icon key={`${recipe.title}-star${i}`} id="starFilled" size="small" color="#f78c05"/>)
+        : starList.push(<Icon key={`${recipe.title}-star${i}`} id="starBorder" size="small" color="#f78c05"/>)
     }
     return[...starList]
   },[])
@@ -48,7 +48,8 @@ RecipeCard.propTypes = {
     score: PropTypes.number,
     time: PropTypes.arrayOf(PropTypes.number),
     people:PropTypes.number,
-    imageUrl:PropTypes.string
+    imageUrl:PropTypes.string,
+    author: PropTypes.string,
   })
 }
 RecipeCard.defaultProps = {
@@ -59,5 +60,6 @@ RecipeCard.defaultProps = {
     time:[25,30],
     people:0,
     imageUrl:tray,
+    author:"aaaaaaaaaa"
   }
 }
