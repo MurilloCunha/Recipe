@@ -22,7 +22,7 @@ function LoginPage({user,setUser}) {
     LoginSimulator({userName, password})
       .then(userData => {
         setUser(userData)
-        history.push('/home')
+        history.push('/receitas/todas-receitas')
       })
       .catch(userData => setUser(userData))
   }, [])
