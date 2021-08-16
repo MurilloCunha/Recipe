@@ -12,6 +12,7 @@ body {
   --secondary-text:#999;
   --alternative-text:#f78c05;
   --gray:#ccc;
+  --gray2:#ededed;
   --inactive:rgba(255,255,255,0.3);
   --error:rgba(255,0,0,1);
 }
@@ -35,4 +36,6 @@ a {
 @import url(./components/button/button.css);
 @import url(./components/TextInput/text-input.css);
 @import url(./components/recipe-card/recipe-card.css);
+@import url(./components/search-Input/search-input.css);
+@import url(./components/category-selector/category-selector.css);
 @import url(./pages/login/login.css);
