@@ -1,0 +1,33 @@
+.search-input{
+  display: flex;
+  align-items: center;
+  padding:0 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-input svg{
+  position: relative;
+  left:1rem;
+}
+
+.search-input input{
+  height: 2.5rem;
+  border:1px solid var(--gray);
+  border-radius: 1.25rem;
+  font-family: "MontSerrat",sans-serif;
+  box-sizing: border-box;
+  padding-left:3.5rem;
+  margin-left: -2rem;
+  font-size: 1rem;
+  width: 100%;
+  color:var(--secondary-text);
+}
+
+.search-input input:focus{
+  outline: none;
+  border:2px solid var(--primary);
+
+}
