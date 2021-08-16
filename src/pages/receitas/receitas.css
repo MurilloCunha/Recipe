@@ -1,0 +1,10 @@
+.recipes-wrapper{
+  overflow:auto;
+  display:flex;
+  height:calc(100vh - 8.5rem);
+  width:100%;
+  flex-direction:column;
+  align-items:center;
+  box-sizing:border-box;
+  padding:1.5rem 1rem;
+}
