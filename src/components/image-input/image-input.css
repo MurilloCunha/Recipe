@@ -8,7 +8,10 @@
   width: 7rem;
   display: block;
 }
-
+.image-input input:focus + label >img{
+  border:2px solid var(--primary);
+  border-radius:8px;
+}
 .image-input img {
   height: 100%;
   width:100%;
