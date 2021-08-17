@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react'
 
 import ImageInput from '../../components/image-input'
+import IngredientsList from '../../components/ingredients-list'
 import TextInput from '../../components/TextInput'
 
 function NewRecipe() {
@@ -19,7 +20,7 @@ function NewRecipe() {
       <form onSubmit={handleSubmit}>
         <article className="new-recipe__description">
           <ImageInput name="recipeFoto"/>
-          <div>
+          <div className="new-recipe__info">
             <TextInput type="text" variant="form" label="Nome" name="recipeName" required/>
             <select name="category" required>
               <option value="">Categoria</option>
@@ -55,6 +56,10 @@ function NewRecipe() {
         </article>
         <article className="new-recipe__ingredients">
           <h2>Ingredientes</h2>
+          <IngredientsList />
+        </article>
+        <article className="new-recipe__steps">
+          <h2>Passos</h2>
         </article>
           <button type="submit">TESTE</button>
       </form>

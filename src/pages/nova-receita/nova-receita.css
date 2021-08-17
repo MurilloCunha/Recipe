@@ -17,10 +17,17 @@
   font-size: 1.2rem;
 }
 
-.new-recipe__description{
+.new-recipe__description,
+.new-recipe__properties{
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom:1rem;
+}
+
+.new-recipe__info{
+  margin-left: 1rem;
 }
 
 .new-recipe-wrapper select{
@@ -34,25 +41,10 @@
   margin-bottom: 1rem;
 }
 
-.new-recipe__properties{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .new-recipe__properties select {
   width: 48%;
 }
-.new-recipe__ingredients ol{
-  padding:0;
-  margin:0;
-}
-.new-recipe__ingredients li{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+
 .new-recipe-wrapper h2{
   width: 100%;
   margin:0;
