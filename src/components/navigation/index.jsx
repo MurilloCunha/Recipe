@@ -7,7 +7,6 @@ import Icon from '../icon'
 
 function Navigation({baseColor, activeColor,setUser}) {
   const location = useLocation()
-  console.log(location.pathname)
 
   const isActive = useCallback((page)=>{
     return location.pathname.includes(page)
