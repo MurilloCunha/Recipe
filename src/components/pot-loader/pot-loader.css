@@ -1,0 +1,153 @@
+/*-------------------Loading--------------------*/
+#pot-loader__right-fire{
+  animation: fire 5s ease-in infinite;
+  transform-origin: 300px 450px;
+}
+#pot-loader__middle-right-fire{
+  animation: fire 5s 0.5s ease-in infinite;
+  transform-origin: 300px 450px;
+}
+#pot-loader__middle-left-fire{
+  animation: fire 5s ease-in infinite;
+  transform-origin: 300px 450px;
+}
+#pot-loader__left-fire{
+  animation: fire 5s 0.5s ease-in infinite;
+  transform-origin: 300px 450px;
+}
+#pot-loader__lid{
+  animation: lid 0.8s ease-in infinite;
+  transform-origin: 300px 300px;
+} 
+#pot-loader__left-smoke{
+  animation: smoke 2s linear infinite;
+  transform-origin: center;
+}
+#pot-loader__right-smoke{
+  animation: smoke 2s 1s linear infinite;
+  transform-origin: center;
+}
+@keyframes fire {
+  0%{
+    transform: scale(1) skewX(10deg);
+  }
+  25%{
+    transform: scale(1.1) skewX(-10deg);
+  }
+  50%{
+    transform: scale(1) skewX(0deg);
+  }
+  75%{
+    transform: scale(1.1) skewX(-10deg);
+  }
+  100%{
+    transform: scale(1) skewX(10deg);
+  }
+}
+
+@keyframes lid {
+  0%{
+    transform: rotate(1deg) translateY(-0.1rem);
+  }
+  50%{
+    transform: rotate(-1deg) translateY(-0.1rem);
+  }
+  100%{
+    transform: rotate(1deg) translateY(-0.1rem);
+  }
+}
+
+@keyframes smoke {
+  0%{
+    transform: skewY(15deg);
+    opacity: 0;
+  }
+  50%{
+    transform: skewY(0deg);
+    opacity: 0.8;
+    fill:#e0e0e0;
+  }
+  100%{
+    transform: skewY(-15deg);
+    opacity: 0;
+  }
+}
+
+/*---------------Success or Error-----------------*/
+#pot-loader__right-fire[data-animation="success"],
+#pot-loader__right-fire[data-animation="error"],
+#pot-loader__middle-right-fire[data-animation="success"],
+#pot-loader__middle-right-fire[data-animation="error"],
+#pot-loader__middle-left-fire[data-animation="success"],
+#pot-loader__middle-left-fire[data-animation="error"],
+#pot-loader__left-fire[data-animation="success"],
+#pot-loader__left-fire[data-animation="error"]{
+  animation: fireOut 0.5s ease-in forwards;
+  transform-origin: 400px 450px;
+}
+#pot-loader__lid[data-animation="success"],
+#pot-loader__lid[data-animation="error"]{
+  animation: lidOpen 0.5s ease-in forwards;
+  transform-origin: 100px 300px;
+} 
+#pot-loader__left-smoke[data-animation="success"],
+#pot-loader__left-smoke[data-animation="error"],
+#pot-loader__right-smoke[data-animation="success"],
+#pot-loader__right-smoke[data-animation="error"]{
+  fill: transparent;
+}
+#pot-loader__success[data-animation="success"]{
+  animation: success 0.5s linear forwards;
+  transform-origin:center;
+}
+#pot-loader__error[data-animation="error"]{
+  animation: error 0.5s linear forwards;
+  transform-origin:center;
+}
+
+@keyframes fireOut {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+@keyframes lidOpen {
+  0%{
+    transform: rotate(0deg) translateX(0);
+  }
+  100%{
+    transform: rotate(-45deg) translateX(-100px);
+  }
+}
+
+@keyframes success {
+  0%{
+    stroke: transparent;
+    transform: translateY(40px);
+  }
+  80%{
+    stroke: transparent;
+    transform: translateY(40px);  
+  }
+  100%{
+    stroke: #6ccf7e;
+    transform: translateY(18px);
+  }
+}
+@keyframes error {
+  0%{
+    stroke: transparent;
+    transform: translateY(0px);
+  }
+  80%{
+    stroke: transparent;
+    transform: translateY(0px);  
+  }
+  100%{
+    stroke: #cf4949;
+    transform: translateY(-26px);
+  }
+}
