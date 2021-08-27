@@ -1,48 +1,49 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useCallback, useEffect, useContext } from 'react'
 
 import TextInput from '../TextInput'
+import Icon from '../icon'
+import RecipeBookContext from '../../context/configure-context'
 
-function IngredientsList({list}) {
-  const [ingredients,setIngredients] = useState([list])
+function IngredientsList() {
+  const { newRecipe, recipeActions } = useContext(RecipeBookContext)
 
-  const handleNewIngredient = useCallback(() => {
-    setIngredients([...ingredients,""])
+  const handleNewIngredient = useCallback((event) => {
+    const { value, dataset } = event.target
+    recipeActions.addIngredient(value, dataset.index)
+  }, [])
 
-  }, [ingredients])
+  const handleRemoveIngredient = useCallback((event) => {
+    const { dataset } = event.currentTarget
+    recipeActions.deleteIngredient(dataset.index)
+  }, [])
 
-
-  useEffect(()=>{
+  useEffect(() => {
     const list = document.querySelector('.ingredients-list')
-    list.scroll({top:list.scrollHeight})
-  },[ingredients])
+    list.scroll({ top: list.scrollHeight, behavior: 'smooth' })
+  }, [])
 
   return (
     <ol className="ingredients-list" >
-      {ingredients.map((ingredient,index) => (
+      {newRecipe.ingredients.map((ingredient, index) => (
         <li key={`${ingredient}_${index}`}>
           <div>
-            <TextInput 
+            <TextInput
               variant="form"
-              placeholder="Ex.: 1/2 xícara de farinha."
-              defaultValue={ingredient}
+              placeholder="Ex.: 1 1/2 xícara de farinha."
               required
-              name={`ingredient_${index}`}
-            />
+              onBlur={handleNewIngredient}
+              defaultValue={ingredient}
+              name={`ingredient`}
+              data-index={index}
+              formNoValidate
+              />
+            <button type="button" data-index={index} onClickCapture={handleRemoveIngredient}><Icon id="delete" color="rgba(255,0,0,1)" size="small" /> </button>
           </div>
         </li>
       ))}
-      <button type="button" onClick={handleNewIngredient}><span>+</span> Novo Ingrediente</button>
+      <button type="button" data-index={newRecipe.ingredients.length} onClick={handleNewIngredient}><span>+</span> Novo Ingrediente</button>
     </ol>
   )
 }
 
 export default IngredientsList
-
-IngredientsList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string),
-}
-
-IngredientsList.defaultProps = {
-  list: [""]
-}
