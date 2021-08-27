@@ -52,3 +52,33 @@
   font-family: 'MontSerrat',sans-serif;
   font-size: 1rem;
 }
+
+.new-recipe__controls{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.new-recipe__error{
+  color: var(--error);
+  font-family: 'MontSerrat', sans-serif;
+  font-size: 0.8rem;
+}
+
+.new-recipe__message{
+  font-family: 'MontSerrat', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  animation: opacity 0.5s linear forwards;
+}
+
+@keyframes opacity {
+  from{
+    opacity:0;
+  }
+  to{
+    opacity: 1;
+  }
+}
