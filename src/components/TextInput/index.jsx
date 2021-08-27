@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 
 import PropTypes from 'prop-types'
 
@@ -8,6 +8,11 @@ function TextInput(props) {
   const handleChange= useCallback((event) => {
     const { value } = event.target
     setEmpty(value.length > 0 ? value : "empty")
+  },[])
+
+  useEffect(() => {
+    const input = document.getElementById(props.name)
+    setEmpty(input.value.length > 0 ? "filled" : "empty")
   },[])
 
   return (
